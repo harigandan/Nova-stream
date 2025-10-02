@@ -1,0 +1,111 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 221 39% 10%; /* Deep Blue */
+    --foreground: 210 40% 98%;
+    --card: 221 39% 12%;
+    --card-foreground: 210 40% 98%;
+    --popover: 221 39% 10%;
+    --popover-foreground: 210 40% 98%;
+    --primary: 210 40% 98%;
+    --primary-foreground: 221.2 39.3% 11%;
+    --secondary: 217.2 32.6% 17.5%;
+    --secondary-foreground: 210 40% 98%;
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+    --accent: 19 97% 52%; /* Bright Orange */
+    --accent-foreground: 210 40% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 19 97% 52%;
+    --radius: 0.5rem;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+}
+
+@layer utilities {
+  .animated-gradient-background {
+    background-size: 400% 400%;
+    animation: gradient 15s ease infinite;
+    background-image: linear-gradient(
+      -45deg,
+      hsl(var(--background)),
+      hsl(var(--accent) / 0.3),
+      hsl(var(--secondary)),
+      hsl(var(--background))
+    );
+  }
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in {
+  animation: fadeIn 1s ease-in-out;
+}
+
+/* Score Ticker Animation */
+.ticker-wrap {
+    width: 100%;
+    overflow: hidden;
+    box-sizing: border-box;
+}
+.ticker-move {
+    display: inline-block;
+    white-space: nowrap;
+    animation: ticker 60s linear infinite;
+}
+.ticker-wrap:hover .ticker-move {
+    animation-play-state: paused;
+}
+@keyframes ticker {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+    
