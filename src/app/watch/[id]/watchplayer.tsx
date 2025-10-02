@@ -51,7 +51,7 @@ export const WatchPlayer: React.FC<WatchPlayerProps> = ({ playbackUrl }) => {
   };
 
   return (
-    <div className="relative w-full max-w-5xl aspect-video bg-black">
+    <div className="relative w-full max-w-7xl aspect-video bg-black">
       <video ref={videoRef} className="w-full h-full object-cover" playsInline muted />
       {!isPlaying && (
         <div className="absolute inset-0 flex items-center justify-center">

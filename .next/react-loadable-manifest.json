@@ -1,0 +1,22 @@
+{
+  "..\\node_modules\\next\\dist\\client\\index.js -> ../pages/_app": {
+    "id": 90472,
+    "files": [
+      "static/chunks/472.2c08b965bd9148e2.js"
+    ]
+  },
+  "..\\node_modules\\next\\dist\\client\\index.js -> ../pages/_error": {
+    "id": 99341,
+    "files": [
+      "static/chunks/341.ff4e8a6f8a614c58.js"
+    ]
+  },
+  "app\\watch\\[id]\\page.tsx -> ./watchplayer": {
+    "id": 87243,
+    "files": [
+      "static/chunks/f5c3f50f.7f22335a7146a995.js",
+      "static/chunks/25.243a7a5e6d034518.js",
+      "static/chunks/243.43522bfa6d8f152d.js"
+    ]
+  }
+}
